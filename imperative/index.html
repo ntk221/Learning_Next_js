@@ -1,0 +1,24 @@
+<!-- index.html -->
+<html>
+  <body>
+    <div id="app"></div>
+    <script type="text/javascript"> // script タグのなかで、JavaScript が使える
+      // app id と、DOM メソッド getElementById を使って、app id が指定された div 要素を取得する 
+      const app = document.getElementById('app');
+
+      // DOM メソッド createElement() を使って、新しい H1 要素を作る
+      const header = document.createElement('h1');
+
+      // H1 要素に入れるための text node を作る
+      const headerContent = document.createTextNode(
+        'Develop. Preview. Ship. ',
+      );
+
+      // H1 要素に 上のテクストを追加する
+      header.appendChild(headerContent);
+
+      // H1 element を app id を持つ div 要素の中に位置づける
+      app.appendChild(header);
+    </script>
+  </body>
+</html>
